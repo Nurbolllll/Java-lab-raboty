@@ -41,16 +41,25 @@ class Airplane extends Transport {
         System.out.println(name + " flies in the sky at " + speed + " km/h");
     }
 }
-
-public class Main {
+class Ship extends Transport {
+    Ship(String name, int speed) {
+        super(name, speed);
+    }
+    void move() {
+        System.out.println(name + " sails on water " + speed + " km/h");
+    }
+}
+public class variant1 {
     public static void main(String[] args) {
 
         Car car = new Car("Toyota", 180);
         Train train = new Train("Express", 250);
         Airplane plane = new Airplane("Boeing", 900);
+        Ship ship = new Ship("Neptune", 40);
 
         car.move();
         train.move();
         plane.move();
+        ship.move();
     }
 }
